@@ -14,3 +14,4 @@ export async function createPost(
 ) {
    return prisma.post.create({ data: post })
 }
+

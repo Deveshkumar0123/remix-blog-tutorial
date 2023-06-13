@@ -6,12 +6,12 @@ import invariant from "tiny-invariant"
 import { createPost } from "~/models/post.server"
 
 export const action = async ({ request }: ActionArgs) => {
-    // await new Promise((res) => setTimeout(res, 1000))
     const formData = await request.formData()
 
     const title = formData.get("title");
     const slug = formData.get("slug");
     const markdown = formData.get("markdown");
+    
 
     const errors = {
         title: title ? null : "Title is required",
